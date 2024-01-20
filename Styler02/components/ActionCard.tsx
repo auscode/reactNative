@@ -35,11 +35,11 @@ export default function ActionCard() {
         <View style={styles.footerContainer}>
           <TouchableOpacity
             onPress={() => openWebsite('https://lekhan.vercel.app/')}>
-            <Text>Read More</Text>
+            <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => openWebsite('https://instagram.com/@maiharshithu/')}>
-            <Text>Follow Me</Text>
+            <Text style={styles.socialLinks}>Follow Me</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -48,14 +48,57 @@ export default function ActionCard() {
 }
 
 const styles = StyleSheet.create({
-  headingText: {},
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
-  cardImage: {
-    height: 300,
+  headingText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    paddingHorizontal: 8,
   },
-  bodyContainer: {},
-  footerContainer: {},
+  card: {
+    width: 390,
+    height: 400,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16,
+  },
+  elevatedCard: {
+    backgroundColor: '#E07c24',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowColor: '#333',
+    shadowOpacity: 0.4,
+  },
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerText: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  cardImage: {
+    height: 190,
+  },
+  bodyContainer: {
+    padding: 10,
+  },
+  footerContainer: {
+    padding: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  socialLinks: {
+    fontSize: 16,
+    color: 'black',
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    borderRadius: 6,
+  },
 });
