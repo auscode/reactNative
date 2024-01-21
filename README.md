@@ -5,4 +5,4 @@ For proejct initiation
 
 ## Project 2 Styler02
 
-[./DemoImages/demo02.jpg]
+![Project2](./DemoImages/demo02.jpg)
