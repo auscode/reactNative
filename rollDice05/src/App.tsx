@@ -8,6 +8,12 @@ import {
   ImageSourcePropType,
   Pressable,
 } from 'react-native';
+import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
+
+const options = {
+  enableVibrateFallback: true,
+  ignoreAndroidSystemSettings: false,
+};
 
 import DiceOne from '../assets/One.png';
 import DiceTwo from '../assets/Two.png';
@@ -57,6 +63,7 @@ function App(): React.JSX.Element {
         setDiceImage(DiceOne);
         break;
     }
+    ReactNativeHapticFeedback.trigger('impactLight', options);
   };
   return (
     <View style={styles.container}>
