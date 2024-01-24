@@ -1,13 +1,31 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, Button, View} from 'react-native';
 import React from 'react';
 
-export default function Home() {
+//Naviagtion
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../App';
+
+type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+const Home = ({navigation}: HomeProps) => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.container}>
+      <Text style={styles.smallText}>Home</Text>
+      <Button
+        title="Go to details"
+        // onPress={() =>
+        //   navigation.navigate('Deatils', {
+        //     productId: '86',
+        //   })}
+        // onPress={() => navigation.navigate('Details')}
+        onPress={() =>
+          navigation.push('Details', {
+            productId: '86',
+          })
+        }></Button>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -19,3 +37,5 @@ const styles = StyleSheet.create({
     color: '#000000',
   },
 });
+
+export default Home;
