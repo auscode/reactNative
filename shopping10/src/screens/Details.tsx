@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   name: {
     marginBottom: 4,
-
+    color: '#000000',
     fontSize: 20,
     fontWeight: '500',
   },

@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   name: {
     marginBottom: 4,
-
+    color: '#000000',
     fontSize: 15,
     fontWeight: '500',
   },
