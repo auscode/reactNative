@@ -1,4 +1,4 @@
-import { Track } from "react-native-track-player";
+import { Track } from 'react-native-track-player';
 
 export const playListData: Track[] = [
     {
@@ -47,4 +47,3 @@ export const playListData: Track[] = [
       url: require('./assets/audio/five.mp3'),
     },
   ];
-  
