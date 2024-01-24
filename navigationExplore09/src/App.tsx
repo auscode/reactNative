@@ -10,14 +10,41 @@ import {
   View,
 } from 'react-native';
 
+//Navigation
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+//Screns
+import Home from './screens/Home';
+import Details from './screens/Details';
 
+type RootStackParamList = {
+  Home: undefined;
+  Details: {productId: string};
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView>
-      <StatusBar />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: 'Trending Product',
+          }}
+        />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{
+            title: 'Product Details',
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
