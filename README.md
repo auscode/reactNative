@@ -1,11 +1,3 @@
-# Project Styler02
-
-## Image Files
-
-Here are some image files included in this project:
-
-<!-- ![Project2](<./DemoImages/demo%20(10).png>) -->
-
 # Project Image Table
 
 |                                               |                                               |
