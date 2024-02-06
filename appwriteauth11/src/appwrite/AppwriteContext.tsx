@@ -3,13 +3,13 @@ import React, {FC, PropsWithChildren, createContext, useState} from 'react';
 import Appwrite from './service';
 
 type AppContextType = {
-  appwite: Appwrite;
+  appwrite: Appwrite;
   isLoggedIn: boolean;
   setIsLoggedIn: (isLoggedIn: boolean) => void;
 };
 
 export const AppwriteContext = createContext<AppContextType>({
-  appwite: new Appwrite(),
+  appwrite: new Appwrite(),
   isLoggedIn: false,
   setIsLoggedIn: () => {},
 });
@@ -17,7 +17,7 @@ export const AppwriteContext = createContext<AppContextType>({
 export const AppwriteProvider: FC<PropsWithChildren> = ({children}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const defaultValue = {
-    appwite: new Appwrite(),
+    appwrite: new Appwrite(),
     isLoggedIn,
     setIsLoggedIn,
   };
